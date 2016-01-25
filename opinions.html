@@ -7,19 +7,19 @@
                     <div id="carouselTestimonial" class="carousel carousel-testimonials slide" data-ride="carousel">
                         <!-- Indicators -->
                         <ol class="carousel-indicators">
-                            <li ng-repeat="testimonial in testimonials" data-target="#carouselTestimonial" data-slide-to="{{$index}}" ng-class="{active:!$index}"></li>
+                            <li ng-repeat="testimonial in testimonials | limitTo:5" data-target="#carouselTestimonial" data-slide-to="{{$index}}" ng-class="{active:!$index}"></li>
                         </ol>
 
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
-                            <div ng-repeat="testimonial in testimonials" class="item"  ng-class="{active:!$index}">
+                            <div ng-repeat="testimonial in testimonials | orderBy:'id':true | limitTo:5" class="item"  ng-class="{active:!$index}">
                                 <div class="text-center">
                                     <h4><i class="fa fa-quote-left fa-5x"></i></h4>
                                     <p class="testimonial-text">
-                                      {{testimonial.opinion}}
+                                      {{testimonial.Opinion}}
                                     </p>
                                     <p>
-                                      {{testimonial.client}}
+                                      {{testimonial.Name}}
                                     </p>
                                     <span class="clearfix"></span>
                                 </div>
