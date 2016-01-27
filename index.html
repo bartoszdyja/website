@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html  ng-app="App">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,7 +25,8 @@
     <!--[if lt IE 9]>
         <link rel="stylesheet" href="assets/sky-forms/css/sky-forms-ie8.css">
     <![endif]-->
-
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="app.js"></script>
     <!-- Required JS -->
     <script src="js/jquery.js"></script>
     <script src="js/jquery-ui.min.js"></script>
@@ -34,163 +35,14 @@
     <link rel="stylesheet" href="assets/layerslider/css/layerslider.css" type="text/css">
 
 </head>
-<body>
-<!-- MODALS -->
+<body ng-controller="FinanceCtrl">
 
-<!-- MOBILE MENU - Option 2 -->
-<section id="navMobile" class="aside-menu left">
-    <div id="dl-menu" class="dl-menuwrapper">
-        <ul class="dl-menu"></ul>
-    </div>
-</section>
+  <ng-include src="'navigation.html'"></ng-include>
 
-
-            <!-- HEADER -->
-<div id="divHeaderWrapper">
-  <header class="header-standard-2">
-    <!-- MAIN NAV -->
-    <div class="navbar navbar-wp navbar-arrow mega-nav" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <i class="fa fa-bars icon-custom"></i>
-                </button>
-
-                <a class="navbar-brand" href="index.html" title="Kredyty hipoteczne - Wrocław">
-                    <img src="images/logo.jpg" alt="Kredyty hipoteczne - Wrocław">
-                </a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#" >Poznaj nas</a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kredyty hipoteczne</a>
-                        <ul class="dropdown-menu">                   
-                            <li><a href="timeline.html">Timeline</a></li>
-                            <li><a href="listings.html">Listings</a></li>
-                            <li class="dropdown-submenu">
-                                <a tabindex="-1" href="#">Helpful pages</a>
-                                <ul class="dropdown-menu">
-                                    <li><a tabindex="-1" href="404.html">Error 404</a></li>
-                                    <li><a tabindex="-1" href="faq.html">FAQ</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kto nam zaufał</a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-submenu">
-                                <a tabindex="-1" href="#">Real Estate</a>
-                                <ul class="dropdown-menu">
-                                    <li><a tabindex="-1" href="homepage-estate-1.html">Homepage</a></li>
-                                    <li><a tabindex="-1" href="estate-listing-1.html">Listing: List </a></li>
-                                    <li><a tabindex="-1" href="estate-listing-2.html">Listing: Grid</a></li>
-                                    <li><a tabindex="-1" href="estate-property.html">Property</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a tabindex="-1" href="#">Klienci o nas</a>
-                                <ul class="dropdown-menu">
-                                    <li><a tabindex="-1" href="homepage-jobs-1.html">Homepage</a></li>
-                                    <li><a tabindex="-1" href="jobs-listing-1.html">Jobs listing</a></li>
-                                    <li><a tabindex="-1" href="job-description-1.html">Job description</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a tabindex="-1" href="#">Magazine &amp; Newspaper</a>
-                                <ul class="dropdown-menu">
-                                    <li class="divider">Magazine</li>
-                                    <li><a tabindex="-1" href="homepage-magazine-1.html">Homepage</a></li>
-                                    <li><a tabindex="-1" href="magazine-listing-1.html">Category listing: List</a></li>
-                                    <li><a tabindex="-1" href="magazine-listing-2.html">Category listing: Grid</a></li>
-                                    <li><a tabindex="-1" href="magazine-article-1.html">Magazine article</a></li>
-                                    <li class="divider">Newspaper</li>
-                                    <li><a tabindex="-1" href="homepage-newspaper-1.html">Newspaper homepage</a></li>
-                                    <li><a tabindex="-1" href="newspaper-listing-1.html">Newspaper listing: List</a></li>
-                                    <li><a tabindex="-1" href="newspaper-listing-2.html">Newspaper listing: Grid</a></li>
-                                    <li><a tabindex="-1" href="magazine-article-1.html">Newspaper article</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Klienci o nas</a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-submenu">
-                                <a tabindex="-1" href="#">Newsletter template</a>
-                                <ul class="dropdown-menu">
-                                    <li class="dropdown-submenu"><a tabindex="-1" href="#">Default</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a tabindex="-1" href="newsletter/default/newsletter-default-1.html" target="_blank">Newsletter Default: Red</a></li>
-                                            <li><a tabindex="-1" href="newsletter/default/newsletter-default-2.html" target="_blank">Newsletter Default: Purple</a></li>
-                                            <li><a tabindex="-1" href="newsletter/default/newsletter-default-3.html" target="_blank">Newsletter Default: Blue</a></li>
-                                            <li><a tabindex="-1" href="newsletter/default/newsletter-default-4.html" target="_blank">Newsletter Default: Green</a></li>
-                                            <li><a tabindex="-1" href="newsletter/default/newsletter-default-5.html" target="_blank">Newsletter Default: Yellow</a></li>
-                                            <li><a tabindex="-1" href="newsletter/default/newsletter-default-6.html" target="_blank">Newsletter Default: Orange</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown-submenu"><a tabindex="-1" href="#">Flat</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a tabindex="-1" href="newsletter/flat/newsletter-flat-1.html" target="_blank">Newsletter Flat: Alizarin</a></li>
-                                            <li><a tabindex="-1" href="newsletter/flat/newsletter-flat-2.html" target="_blank">Newsletter Flat: Amethyst</a></li>
-                                            <li><a tabindex="-1" href="newsletter/flat/newsletter-flat-3.html" target="_blank">Newsletter Flat: Belize Hole</a></li>
-                                            <li><a tabindex="-1" href="newsletter/flat/newsletter-flat-4.html" target="_blank">Newsletter Flat: Emerald</a></li>
-                                            <li><a tabindex="-1" href="newsletter/flat/newsletter-flat-5.html" target="_blank">Newsletter Flat: Sun Flower</a></li>
-                                            <li><a tabindex="-1" href="newsletter/flat/newsletter-flat-6.html" target="_blank">Newsletter Flat: Carrot</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown-submenu"><a tabindex="-1" href="#">Shop</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a tabindex="-1" href="newsletter/shop/newsletter-shop-1.html" target="_blank">Newsletter Shop: Red</a></li>
-                                            <li><a tabindex="-1" href="newsletter/shop/newsletter-shop-2.html" target="_blank">Newsletter Shop: Purple</a></li>
-                                            <li><a tabindex="-1" href="newsletter/shop/newsletter-shop-3.html" target="_blank">Newsletter Shop: Blue</a></li>
-                                            <li><a tabindex="-1" href="newsletter/shop/newsletter-shop-4.html" target="_blank">Newsletter Shop: Green</a></li>
-                                            <li><a tabindex="-1" href="newsletter/shop/newsletter-shop-5.html" target="_blank">Newsletter Shop: Yellow</a></li>
-                                            <li><a tabindex="-1" href="newsletter/shop/newsletter-shop-6.html" target="_blank">Newsletter Shop: Orange</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a tabindex="-1" href="#">Components</a>
-                                <ul class="dropdown-menu">
-                                    <li>Accordion</li>
-                                    <li><a tabindex="-1" >Zazdwoń do nas: 790 852 790</a></li>
-                                    <li><a tabindex="-1" href="wp-badges.html">Badges</a></li>
-                                    <li><a tabindex="-1" href="wp-blocks-default.html">Blocks</a></li>
-                                    <li><a tabindex="-1" href="wp-buttons-boomerang.html">Buttons</a></li>
-                                    <li><a tabindex="-1" href="wp-callouts.html">Callouts</a></li>
-                                    <li><a tabindex="-1" href="wp-carousels.html">Carousels</a></li>
-                                    <li><a tabindex="-1" href="wp-counters.html">Counters</a></li>
-                                    <li><a tabindex="-1" href="wp-pagination.html">Pagination</a></li>
-                                    <li><a tabindex="-1" href="wp-progress-bars.html">Progress bars</a></li>
-                                    <li><a tabindex="-1" href="wp-range-sliders.html">Range sliders</a></li>
-                                    <li><a tabindex="-1" href="wp-rating-stars.html">Rating stars</a></li>
-                                    <li><a tabindex="-1" href="wp-ribbons.html">Ribbons</a></li>
-                                    <li><a tabindex="-1" href="wp-tabs.html">Tabs</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="wp-typography-general.html">Typography</a></li>
-                            <li><a href="wp-features.html">Features</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" >Kontakt</a>
-                    </li>          
-                </ul>
-
-            </div><!--/.nav-collapse -->
-        </div>
-    </div>
-</header>        
-</div>
 
         <!-- Optional header components (ex: slider) -->
         	<!-- Importing slider content -->
-	<section id="slider-wrapper" class="layer-slider-wrapper layer-slider-dynamic">
+<section id="slider-wrapper" class="layer-slider-wrapper layer-slider-dynamic">
     <div id="layerslider" style="width:100%;height:520px;">
         <!-- Slide 1 -->
 
@@ -200,14 +52,14 @@
 
             <!-- Left Text -->
             <h3 class="ls-l title text-normal" style="width:600px; top:35%; left:80px;" data-ls="offsetxin:0;offsetyin:250;durationin:1000;delayin:500;offsetxout:0;offsetyout:-8;easingout:easeInOutQuart;scalexout:1.2;scaleyout:1.2;">
-                Warto podejmować </br><span class="strong-600 c-base">mądre</span> decyzje...
+                Warto podejmować <br><span class="strong-600 c-base">mądre</span> decyzje...
             </h3>
 
             <p class="ls-l text-standard" style="width:500px; top:50%; left:80px;" data-ls="offsetxin:0;offsetyin:250;durationin:1000;delayin:1000;offsetxout:0;offsetyout:-8;easingout:easeInOutQuart;scalexout:1.2;scaleyout:1.2;">
             Wykorzystaj wiedzę i doświadczenie, aby upolować najlepszą ofertę finansową
             </p>
 
-            <a href="" class="btn btn-base btn-lg ls-l" style="top:60%; left:80px;" data-ls="offsetxin:0;offsetyin:250;durationin:1500;delayin:1500;offsetxout:0;offsetyout:-8;easingout:easeInOutQuart;scalexout:1.2;scaleyout:1.2;" target="_blank">
+            <a href="#carousel" class="btn btn-base btn-lg ls-l scroll" style="top:60%; left:80px;" data-ls="offsetxin:0;offsetyin:250;durationin:1500;delayin:1500;offsetxout:0;offsetyout:-8;easingout:easeInOutQuart;scalexout:1.2;scaleyout:1.2;">
                 Zaczynajmy
             </a>
         </div>
@@ -215,50 +67,74 @@
 </section>
 
 
+
+
     <!-- MAIN CONTENT -->
-    
+<section>
+    <div class="container relative">
+        <div  id="carousel" class="carousel carousel-2 slide bg-white bb" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel" data-slide-to="0"></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+            <li data-target="#carousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="owl-carousel owl-carousel-single no-padding">
+                <div class="carousel-inner" role="listbox">
+                  <div class="item active">
+                      <div class="row">
+                          <div class="col-md-6">
+                              <h2 class="title">Kredyty hipoteczne</h2>
+                                  <p>Bruder&Dyja to firma doradcza w zakresie finansów, która specjalizuje się w optymalnym dopasowaniu produktów finansowych do Państwa potrzeb. Podstawą działalności firmy jest doradztwo w obszarze instrumentów hipotecznych, takich jak kredyty i pożyczki hipoteczne oraz kredyty konsolidacyjne.
+                                  <br>
+                                  Od początku działalności, która skupiała sie na doradztwie w zakresie finansowania nieruchomości, spotkaliśmy się z już z tysiącami klientów. Dzięki naszej pomocy bezstresowo przeszli Oni proces wyboru kredytu hipotecznego, procesowania wniosku, aby na końcu cieszyć się własnym domem lub mieszkaniem. W Bruder&Dyja Sp. j. zdajemy sobie sprawę z tego, że decyzja o zaciągnięciu kredytu hipotecznego stanowi dla klientów duże przedsięwzięcie i wiąże się z wieloma emocjami. Właśnie dlatego staramy się być dla klientów przewodnikami po zawiłym świecie finansów.
+                                  </p>
+                          </div>
+                          <div class="col-md-6">
+                              <img src="images/prv/estate/estate-slider-bg-2.jpg" class="img-responsive" alt="">
+                          </div>
+                      </div>
+                  </div>
 
-    
-
-    <section id="companyCarousel" class="carousel carousel-2 slide bg-white bb" data-ride="carousel">
-        <div class="container relative">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#companyCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#companyCarousel" data-slide-to="1"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="owl-carousel owl-carousel-single no-padding">
-                    <div class="item active">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h2 class="title">Kredyty hipoteczne</h2>
-                                <p>Bruder&Dyja to firma doradcza w zakresie finansów, która specjalizuje się w optymalnym dopasowaniu produktów finansowych do Państwa potrzeb. Podstawą działalności firmy jest doradztwo w obszarze instrumentów hipotecznych, takich jak kredyty i pożyczki hipoteczne oraz kredyty konsolidacyjne.
+                  <div class="item">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2 class="title">Nasza rola</h2>
+                                <p>Jesteśmy zapracowani. Nasza filozofia przynosi efekty dzięki Państwa zaufaniu. Od początku postawiliśmy na całkowitą przejrzystość i uczciwość w relacjach z naszymi klientami. Firmujemy naszą pracę własnymi nazwiskami właśnie po to, abyście mogli Państwo połączyć naszą wiedzę i doświadczenie z waszymi planami.
                                 </p>
-                            </div>
-                            <div class="col-md-6">
-                                <img src="images/prv/device-3.png" class="img-responsive" alt="">
-                            </div>
+                                <p>Podstawą naszej firmy są polecenia, ponad 90% naszych projektów pochodzi od osób, które mieliśmy przyjemność obsługiwać. Pozwala nam omijać wszelakie sprzedażowe zagrywki oraz oferować najkorzystniejsze finansowo oferty. To był nasz cel i jesteśmy dumni, że w ten sposób okazujecie nam Państwo, że nasze zaangażowanie ma sens.</p>
                         </div>
-                    </div>
-                    <div class="item">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h2 class="title">Wybór kredytu</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                </p>
-                                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
-                                </p>
-                            </div>
-                            <div class="col-md-6">
-                                <img src="images/prv/device-4.png" class="img-responsive" alt="">
-                            </div>
+                        <div class="col-md-6">
+                            <img src="images/prv/estate/estate-slider-bg-1.jpg" class="img-responsive" alt="">
                         </div>
                     </div>
                 </div>
+
+                  <div class="item">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2 class="title">Historia</h2>
+                                <p>Bruder&Dyja Sp. j. jest znaną na wrocławskim rynku firmą zajmująca się doradztwem finansowym. Powstała w pierwszej połowie 2010 roku prężnie rozwija się i gruntuje swoją pozycję zyskując zaufanie klientów i uznanie kooperantów w zakresie kredytowania inwestycji.
+                                </p>
+                                <p>Nasza działalność cały czas podlega dynamicznemu rozwojowi. Staramy się aktywnie odpowiadać na Państwa potrzeby. Dlatego rozszerzyliśmy domenę swojego działania o doradztwo w zakresie produktów dla firm. Teraz możecie Państwo powierzyć nam znalezienie najlepszego kredytu inwestycyjnego oraz leasingu, aby finansować potrzeby Państwa firm. W naszym zespole pracują doświadczeni specjaliści, którzy pomogą Państwu w wyborze odpowiednich instrumentów finansowych dopasowanych do Państwa potrzeb.
+                                </p>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="images/owl.jpg" class="img-responsive" alt="">
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                </div>
             </div>
         </div>
-    </section>
+        </div>
+    </div>
+</section>
 
     <section class="slice p-15 base">
         <div class="cta-wr">
@@ -279,285 +155,14 @@
         </div>
     </section>
 
-    <section class="slice animate-hover-slide bg-white">
-        <div class="wp-section">
-            <div class="container">
-                <div class="section-title-wr">
-                    <h3 class="section-title left"><span>Latest news</span></h3>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="wp-block article grid">
-                            <div class="article-image">
-                                <img src="images/prv/magazine/magazine-small-1.jpg" alt="">
-                                <h4 class="image-title base">Must read</h4>
-                            </div>
-                            <span class="article-category">Business news</span>
-                            <h3 class="title">
-                                <a href="">Fortitor Posuere &amp; Praesent Metus Ins</a>
-                            </h3>
-                            <p>
-                            Laoreet dolore magna aliquam erat are esrseiiqetuer ipisci nibh euismod is tincidunt ut amat volutpat aliquam erat are esrseiiqetuer.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="wp-block article list">
-                                    <div class="article-image">
-                                        <img src="images/prv/magazine/magazine-small-2.jpg" alt="">
-                                    </div>
-                                    <div class="wp-block-body">
-                                        <h3 class="title">
-                                            <a href="" hidefocus="true">Lorem ipsum dolor sit ...</a>
-                                        </h3>
-                                        <p>
-                                        Laoreet dolore magna aliquam erat are esrseiiqetuer ipisci nibh euismod is tincidunt.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="wp-block article list">
-                                    <div class="article-image">
-                                        <img src="images/prv/magazine/magazine-small-3.jpg" alt="">
-                                    </div>
-                                    <div class="wp-block-body">
-                                        <h3 class="title">
-                                            <a href="" hidefocus="true">Lorem ipsum dolor sit ...</a>
-                                        </h3>
-                                        <p>
-                                        Laoreet dolore magna aliquam erat are esrseiiqetuer ipisci nibh euismod is tincidunt.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="wp-block article list">
-                                    <div class="article-image">
-                                        <img src="images/prv/magazine/magazine-small-4.jpg" alt="">
-                                    </div>
-                                    <div class="wp-block-body">
-                                        <h3 class="title">
-                                            <a href="" hidefocus="true">Lorem ipsum dolor sit ...</a>
-                                        </h3>
-                                        <p>
-                                        Laoreet dolore magna aliquam erat are esrseiiqetuer ipisci nibh euismod is tincidunt.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="wp-block article list">
-                                    <div class="article-image">
-                                        <img src="images/prv/magazine/magazine-small-5.jpg" alt="">
-                                    </div>
-                                    <div class="wp-block-body">
-                                        <h3 class="title">
-                                            <a href="" hidefocus="true">Lorem ipsum dolor sit ...</a>
-                                        </h3>
-                                        <p>
-                                        Laoreet dolore magna aliquam erat are esrseiiqetuer ipisci nibh euismod is tincidunt.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="wp-block article list">
-                                    <div class="article-image">
-                                        <img src="images/prv/magazine/magazine-small-6.jpg" alt="">
-                                    </div>
-                                    <div class="wp-block-body">
-                                        <h3 class="title">
-                                            <a href="" hidefocus="true">Lorem ipsum dolor sit ...</a>
-                                        </h3>
-                                        <p>
-                                        Laoreet dolore magna aliquam erat are esrseiiqetuer ipisci nibh euismod is tincidunt.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="wp-block article list">
-                                    <div class="article-image">
-                                        <img src="images/prv/magazine/magazine-small-7.jpg" alt="">
-                                    </div>
-                                    <div class="wp-block-body">
-                                        <h3 class="title">
-                                            <a href="" hidefocus="true">Lorem ipsum dolor sit ...</a>
-                                        </h3>
-                                        <p>
-                                        Laoreet dolore magna aliquam erat are esrseiiqetuer ipisci nibh euismod is tincidunt.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-     
+    <ng-include src="'news.html'"></ng-include>
 
-    <section class="slice white">
-        <div class="wp-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="milestone-counter">
-                            <div class="milestone-count c-gray" data-from="0" data-to="500 " data-speed="3000" data-refresh-interval="100"></div>
-                            <h4 class="milestone-info c-gray">milionów</h4>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="milestone-counter">
-                            <div class="milestone-count c-gray" data-from="0" data-to="154" data-speed="5000" data-refresh-interval="50"></div>
-                            <h4 class="milestone-info c-gray">zrealizowanych projektów</h4>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="milestone-counter">
-                            <div class="milestone-count c-gray" data-from="0" data-to="430" data-speed="5000" data-refresh-interval="80"></div>
-                            <h4 class="milestone-info c-gray">Rewards</h4>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="milestone-counter">
-                            <div class="milestone-count c-gray" data-from="0" data-to="2" data-speed="1000" data-refresh-interval="1"></div>
-                            <h4 class="milestone-info c-gray">ludzi</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="slice base">
-        <div class="wp-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-
-                        <div id="carouselTestimonial" class="carousel carousel-testimonials slide" data-ride="carousel">
-                            <!-- Indicators -->
-                            <ol class="carousel-indicators">
-                                <li data-target="#carouselTestimonial" data-slide-to="0" class="active"></li>
-                                <li data-target="#carouselTestimonial" data-slide-to="1" class=""></li>
-                                <li data-target="#carouselTestimonial" data-slide-to="2" class=""></li>
-                            </ol>
-
-                            <!-- Wrapper for slides -->
-                            <div class="carousel-inner">
-                                <div class="item active">
-                                    <div class="text-center">
-                                        <h4><i class="fa fa-quote-left fa-3x"></i></h4>
-                                        <p class="testimonial-text">
-                                        Lorem ipsum dolor sit amet, consectetur adipisg elitm Ut tincidunt purus iaculis ipsum dctum non dtum quam consectetur adipisg elitm Ut tincidunt, Ut tincidunt purus iaculis ipsum dctum non dtum quam consectetur adipisg elitm Ut tincidunt.
-                                        Lorem ipsum dolor sit amet, consectetur adipisg elitm Ut tincidunt purus iaculis ipsum dctum non dtum quam consectetur adipisg elitm Ut tincidunt.
-                                        </p>
-                                        <p>
-                                            John Doe – Company Inc
-                                        </p>
-                                        <span class="clearfix"></span>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="text-center">
-                                        <h4><i class="fa fa-quote-left fa-3x"></i></h4>
-                                        <p class="testimonial-text">
-                                        Lorem ipsum dolor sit amet, consectetur adipisg elitm Ut tincidunt purus iaculis ipsum dctum non dtum quam consectetur adipisg elitm Ut tincidunt, Ut tincidunt purus iaculis ipsum dctum non dtum quam consectetur adipisg elitm Ut tincidunt.
-                                        Lorem ipsum dolor sit amet, consectetur adipisg elitm Ut tincidunt purus iaculis ipsum dctum non dtum quam consectetur adipisg elitm Ut tincidunt.
-                                        </p>
-                                        <p>
-                                            John Doe – Company Inc
-                                        </p>
-                                        <span class="clearfix"></span>
-                                    </div>
-                                </div>
-                                <div class="item ">
-                                    <div class="text-center">
-                                        <h4><i class="fa fa-quote-left fa-3x"></i></h4>
-                                        <p class="testimonial-text">
-                                        Lorem ipsum dolor sit amet, consectetur adipisg elitm Ut tincidunt purus iaculis ipsum dctum non dtum quam consectetur adipisg elitm Ut tincidunt, Ut tincidunt purus iaculis ipsum dctum non dtum quam consectetur adipisg elitm Ut tincidunt.
-                                        Lorem ipsum dolor sit amet, consectetur adipisg elitm Ut tincidunt purus iaculis ipsum dctum non dtum quam consectetur adipisg elitm Ut tincidunt.
-                                        </p>
-                                        <p>
-                                            John Doe – Company Inc
-                                        </p>
-                                        <span class="clearfix"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
+    <!-- <ng-include src="'us.html'"></ng-include> -->
+    <ng-include src="'opinions.html'"></ng-include>
 
 
-    <section class="slice bg-white bb animate-hover-slide-3">
-        <div class="wp-section">
-            <div class="container">
-                <div class="section-title-wr">
-                    <h3 class="section-title left"><span>Poznaj nas</span></h3>
-                </div>
-                <div class="row">
 
-                    <div class="col-md-3">
-                        <div class="wp-block inverse">
-                            <div class="figure">
-                                <img alt="" src="images/prv/team/team-corporate-3.jpg" class="img-responsive">
-                                <div class="figcaption">
-                                    <ul class="social-icons text-right">
-                                        <li class="text pull-left">More on:</li>
-                                        <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h2>John Doe<small>Product Manager</small></h2>
-                            <p>
-                            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus.
-                            </p>
-                        </div>
-                    </div>
 
-                    <div class="col-md-3">
-                        <div class="wp-block inverse">
-                            <div class="figure">
-                                <img alt="" src="images/prv/team/team-corporate-1.jpg" class="img-responsive">
-                                <div class="figcaption">
-                                    <ul class="social-icons text-right">
-                                        <li class="text pull-left">More on:</li>
-                                        <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h2>Derek Shepard<small>Web Developer</small></h2>
-                            <p>
-                            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-
-    
 
     <!-- CLIENTS -->
     <section class="slice bg-white">
@@ -569,15 +174,15 @@
                 <div class="row">
                     <div class="col-md-2 col-sm-4 col-xs-6">
                         <div class="client">
-                            <a href="#">
-                                <img src="images/clients/client-1.png" alt="">
+                            <a href="http://www.inwestgrupa.pl" target="_blank">
+                                <img src="images/partners/kredyty_hipoteczne_ig.png" alt="">
                             </a>
                         </div>
                     </div>
                      <div class="col-md-2 col-sm-4 col-xs-6">
                         <div class="client">
                             <a href="#">
-                                <img src="images/clients/client-2.png" alt="">
+                                <img src="images/partners/kredyty_hipoteczne_sky_tower.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -621,36 +226,18 @@
                     <div class="col">
                        <h4>Adres</h4>
                        <ul>
-                            <li>5th Avenue, New York - United States</li>
-                            <li>Phone: +10 724 1234 567 | Fax: +10 724 1234 567 </li>
-                            <li>Email: <a href="mailto:hello@example.com" title="Email Us">hello@example.com</a></li>
-                            <li>Skype: <a href="skype:my.business?call" title="Skype us">my-business</a></li>
-                            <li>Creating great templates is our passion</li>
+                            <li>Bruder & Dyja - kredyty hipoteczne</li>
+                            <li></li>
+                            <li>Telefon: 790 852 790</li>
+                            <li>Email: <a href="mailto:biuro@bdfinanse.pl" title="Email Us">biuro@bdfinanse.pl</a></li>
                         </ul>
                      </div>
                 </div>
 
                 <div class="col-md-3">
-                    <div class="col">
-                        <h4>Zostaw kontakt</h4>
-                        <p>Podaj swój email, aby skontaktować</p>
-                        <form class="form-horizontal form-light">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Twój email...">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-base" type="button">Wyślij!</button>
-                                </span>
-                            </div>
-                        </form>
-                    </div>
                 </div>
 
                 <div class="col-md-3">
-                    <div class="col col-social-icons">
-                        <h4>Co u nas</h4>
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-google-plus"></i></a>
-                    </div>
                 </div>
 
                  <div class="col-md-3">
@@ -658,16 +245,10 @@
                         <h4>About us</h4>
                         <p class="no-margin">
                         Boomerang MultiPurpose Template is a multi-solution product made with simplicity in mind so you can benefit as much as possible from it.
-                        <br><br>
-                        <a href="#" class="btn btn-block btn-base btn-icon fa-check"><span>Try it now</span></a>
                         </p>
                     </div>
                 </div>
             </div>
-
-            <hr>
-
-            
         </div>
     </footer>
 </div>
@@ -702,12 +283,13 @@
 <script src="assets/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
 <script src="assets/waypoints/waypoints.min.js"></script>
 <script src="assets/milestone-counter/jquery.countTo.js"></script>
-<script src="assets/easy-pie-chart/js/jquery.easypiechart.js"></script>
+<!-- <script src="assets/easy-pie-chart/js/jquery.easypiechart.js"></script> -->
 <script src="assets/social-buttons/js/rrssb.min.js"></script>
 <script src="assets/nouislider/js/jquery.nouislider.min.js"></script>
 <script src="assets/owl-carousel/owl.carousel.js"></script>
 <script src="assets/bootstrap/js/tooltip.js"></script>
 <script src="assets/bootstrap/js/popover.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.7.1/jquery.smooth-scroll.min.js"></script> -->
 
 <!-- Sripts for individual pages, depending on what plug-ins are used -->
 <script src="assets/layerslider/js/greensock.js" type="text/javascript"></script>
@@ -725,6 +307,12 @@
         skin: 'borderlessdark3d',
         hoverPrevNext: true,
     });
+    jQuery(document).ready(function($) {
+      $(".scroll").click(function(event){
+      event.preventDefault();
+    $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+  });
+});
 </script>
 
 <!-- Boomerang App JS -->
@@ -734,10 +322,6 @@
     <script src="js/respond.min.js"></script>
 <![endif]-->
 
-<!-- Temp -- You can remove this once you started to work on your project -->
-<script src="js/jquery.cookie.js"></script>
-<script src="js/wp.switcher.js"></script>
-<script type="text/javascript" src="js/wp.ga.js"></script>
 
 
 </body>

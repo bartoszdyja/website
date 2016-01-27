@@ -1,0 +1,35 @@
+<section class="slice base">
+    <div class="wp-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div id="carouselTestimonial" class="carousel carousel-testimonials slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li ng-repeat="testimonial in testimonials | limitTo:5" data-target="#carouselTestimonial" data-slide-to="{{$index}}" ng-class="{active:!$index}"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <div ng-repeat="testimonial in testimonials | orderBy:'id':true | limitTo:5" class="item"  ng-class="{active:!$index}">
+                                <div class="text-center">
+                                    <h4><i class="fa fa-quote-left fa-5x"></i></h4>
+                                    <p class="testimonial-text">
+                                      {{testimonial.Opinion}}
+                                    </p>
+                                    <p>
+                                      {{testimonial.Name}}
+                                    </p>
+                                    <span class="clearfix"></span>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
